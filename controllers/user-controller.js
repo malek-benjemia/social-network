@@ -4,10 +4,10 @@ const userController = {
   // get all Users
   getAllUser(req, res) {
     User.find({})
-      /*.populate({
+      .populate({
         path: 'thoughts',
         select: '-__v'
-      })*/
+      })
       .select('-__v')
       .sort({ _id: -1 })
       .then(dbUserData => res.json(dbUserData))
@@ -57,7 +57,20 @@ const userController = {
     User.findOneAndDelete({ _id: params.id })
       .then(dbUserData => res.json(dbUserData))
       .catch(err => res.json(err));
+  },
+
+
+  // remove Friend
+  removeFriend({ params }, res) {
+    User.findOneAndUpdate(
+      { _id: params.userId },
+      { $pull: { friends: { _id: params.friendId } } },
+      { new: true }
+    )
+      .then(dbUserData => res.json(dbUserData))
+      .catch(err => res.json(err));
   }
+
 };
 
 module.exports = userController;

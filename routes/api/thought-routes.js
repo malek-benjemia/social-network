@@ -15,7 +15,7 @@ router
   .put(addReaction)
   .delete(removeThought);
 
-// /api/comments/<pizzaId>/<commentId>/<replyId>
+// /api/comments/<userId>/<thoughtId>/<reactionId>
 router.route('/:userId/:thoughtId/:reactionId').delete(removeReaction);
 
 module.exports = router;
