@@ -1,6 +1,8 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
+const validator = require('validator');
+
 const UserSchema = new Schema(
   {
     userName: {
@@ -12,8 +14,12 @@ const UserSchema = new Schema(
     email: {
       type: String,
       required: true,
-      unique: true
-      //////////// Must match a valid email address (look into Mongoose's matching validation)mat
+      unique: true,
+      validate:{
+        validator: validator.isEmail,
+        message: '{VALUE} is not a valid email',
+        isAsync: false
+      }
     },
     thoughts: [
       {

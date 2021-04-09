@@ -14,7 +14,7 @@ Build an application that allows to manage a Blog. Please find refer to the <a h
 <a href="#questions">Questions</a></br>
 
 ## <span id="installation">Installation</span>
-npm install express mongoose.
+npm install express mongoose validator
 Please don't forget to properly set the gitignore file.
 
 ## <span id="usage">Usage</span>
