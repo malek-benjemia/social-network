@@ -23,6 +23,20 @@ const thoughtController = {
           res.sendStatus(400);
         });
     },
+
+     // update Thought by id
+  updateThought({ params, body }, res) {
+    Thought.findOneAndUpdate({ _id: params.thoughtId }, body, { new: true, runValidators: true })
+      .then(dbThoughtData => {
+        if (!dbThoughtData) {
+          res.status(404).json({ message: 'No thought found with this id!' });
+          return;
+        }
+        res.json(dbThoughtData);
+      })
+      .catch(err => res.json(err));
+  },
+
   // add Thought to User
   addThought({ params, body }, res) {
     console.log(params);
