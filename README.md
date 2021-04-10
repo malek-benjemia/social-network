@@ -1,7 +1,7 @@
 # Title: Social-Network</br>
 
 ## <span id="description">Description</span>
-Build an application that allows to manage a Blog. Please find refer to the <a href="">video</a> for more information.
+Build an application that allows to manage a Blog. Please find refer to the <a href="https://drive.google.com/file/d/1VW5XkmK53qAR2SO6pyS2A_bZvvMdMKai/view">video1</a> and <a href="https://drive.google.com/file/d/1qaU4QSnuqQoIMxzHNon3_D6nKN3qF49D/view">video2</a> for more information.
 
 ## <span id="content">Table of Contents</span>
 <a href="#description">Description</a></br>
@@ -14,11 +14,11 @@ Build an application that allows to manage a Blog. Please find refer to the <a h
 <a href="#questions">Questions</a></br>
 
 ## <span id="installation">Installation</span>
-npm install express mongoose validator
+npm install express mongoose validator.
 Please don't forget to properly set the gitignore file.
 
 ## <span id="usage">Usage</span>
-Use it to 
+Use it to see the users, thoughts and reactions through Insomnia.
 
 ## <span id="license">License</span>
 This application is covered under no licence.
@@ -27,7 +27,7 @@ This application is covered under no licence.
 Please feel free to contribute as you see fit.
 
 ## <span id="tests">Tests</span>
-Please use <a href="http://localhost:3001">http://localhost:3001</a>.
+Please use Insomnia and http://localhost:3001/api/users or http://localhost:3001/api/thoughts
 
 ## <span id="questions">Questions</span>
 View Project on <a href="https://github.com/malek-benjemia">GitHub</a><br>
