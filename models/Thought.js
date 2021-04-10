@@ -4,15 +4,16 @@ const dateFormat = require('../utils/dateFormat');
 
 const ReactionSchema = new Schema(
   {
-    // set custom id to avoid confusion with parent comment _id
+    // set custom id to avoid confusion with parent thought _id
     reactionId: {
       type: Schema.Types.ObjectId,
       default: () => new Types.ObjectId()
     },
     reactionBody: {
       type: String,
-      required: true
-      ////////////////280 character maximum
+      required: true,
+      minlength: 1,
+      maxlength: 280
     },
     userName: {
       type: String,
